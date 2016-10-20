@@ -87,7 +87,11 @@
                     <p><a href="#/twitter-bootstrap-tutorial/" target="_blank" class="btn btn-success">Learn More &raquo;</a></p>
                 </div>
             </div>
-            
+
+            <div class="row p40">
+                <div id="map"></div>
+            </div>
+
             <hr/>
 
             <div class="row">
@@ -107,9 +111,12 @@
             </div>
 
         </div>
-        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <script src="/js/all.js"> </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdf0HAC3k9Lc_hSPGIYCxsYPmm_S7Y6tY&callback=initMap" async defer></script>
     </body>
 </html>      
                           		

@@ -54,4 +54,3 @@ function initMap() {
 //         }
 //     });
 }
-//# sourceMappingURL=all.js.map

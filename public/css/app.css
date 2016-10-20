@@ -5767,7 +5767,6 @@ button.close {
 
 body {
   background: #333;
-  color: #FAFCFB;
   margin: 0;
   font-size: 16px; }
 
@@ -5795,6 +5794,10 @@ footer {
 
 .navbar {
   font-size: 20px !important; }
+
+#map {
+  height: 400px;
+  width: 100%; }
 
 .home {
   padding-top: 80px; }
