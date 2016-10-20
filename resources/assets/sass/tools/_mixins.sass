@@ -1,0 +1,45 @@
+@mixin font-size($size)
+  font-size: $size
+
+@mixin font-weight($font-weight)
+    @if ($font-weight == "regular")
+        font-weight: 300
+
+    @if ($font-weight == "bold")
+        font-weight: 600
+
+@mixin rounded($radius: 0.5em)
+    border-radius: $radius
+
+//TODO change name to something more meaningfull
+@mixin animate()
+    opacity: 0
+    // -moz-animation-duration: $fade-speed
+    // -o-animation-duration: $fade-speed
+    // -webkit-animation-duration: $fade-speed
+    animation-duration: $fade-speed
+	
+@mixin fade($opacity-value)
+    opacity: $opacity-value
+    transition: opacity $fade-speed
+    //-webkit-transition: opacity $fade-speed
+
+@mixin breakpoint($point)
+   @if $point == desktop 
+     @media (min-width: 1920px) 
+        @content
+   @else if $point == laptop
+     @media (max-width: $breakpoint-medium-small)
+        @content
+   @else if $point == tablet 
+     @media (min-width: 768px)  
+        @content
+   @else if $point == phablet 
+     @media (max-width: 540px)   
+        @content
+   @else if $point == mobileonly
+     @media (max-width: $breakpoint-extra-small) 
+        @content
+
+@mixin transition($args...)
+  transition: $args

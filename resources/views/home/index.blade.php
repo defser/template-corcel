@@ -1,10 +1,12 @@
 @extends('layout')
 
-<div class="home">
+@section('content')
+    <div class="home">
 
-    @foreach($distribuidores as $key => $distribuidor)
-        <p>This is post {{ $distribuidor->Title }}</p>
-    @endforeach
+        @foreach($distribuidores as $key => $distribuidor)
+            <p>This is post {{ $distribuidor->Title }}</p>
+        @endforeach
 
-</div>
+    </div>
+@stop
 
