@@ -29,18 +29,14 @@
                                     {{$post->Title}}
                                 </h2>
                                 <h3 class="post-subtitle">
-                                    {{$post->Content}}
+                                    {!! $post->Content !!}
                                 </h3>
                             </a>
                         </div>
                         <hr>
                     @endforeach
                     <!-- Pager -->
-                    <ul class="pager">
-                        <li class="next">
-                            <a href="#">Posts Anteriores &rarr;</a>
-                        </li>
-                    </ul>
+                    {{ $posts->links() }}
                 </div>
             </div>
         </div>
