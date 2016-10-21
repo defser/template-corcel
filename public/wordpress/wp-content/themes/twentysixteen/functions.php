@@ -420,41 +420,6 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
 
-
-// function create_post_type() {
-    
-//     $labels = array(
-//         'name' => __( 'Distribuidores' ),
-//         'singular_name' => __( 'Distribuidores' )
-//       );
-
-// 	// $args = array(
-// 	// 	'labels' => $labels,
-// 	// 	'public' => true,
-//     //     'has_archive' => true,
-// 	// );
-
-// 	// register_post_type('distribuidor', $args);
-    
-//     register_post_type( 'acme_product',
-//     array(
-//       'labels' => $labels,
-//       'public' => true,
-//       'has_archive' => true,
-//     )
-//   );
-  
-// //     register_post_type( 'acme_product',
-// //     array(
-// //       $labels,
-// //       'public' => true,
-// //       'has_archive' => true,
-// //     )
-// //   );
-// }
-
-//add_action( 'init', 'create_post_type' );
-
 /**
  * Register a Distribuidor post type.
  */
