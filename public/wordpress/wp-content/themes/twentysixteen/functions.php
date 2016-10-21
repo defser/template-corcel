@@ -456,25 +456,41 @@ add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
 //add_action( 'init', 'create_post_type' );
 
 /**
- * Register a book post type.
- */
-function wpdocs_codex_custom_init() {
-    $args = array(
-        'public' => true,
-        'label'  => __( 'Books', 'textdomain' ),
-    );
-    register_post_type( 'book', $args );
-}
-add_action( 'init', 'wpdocs_codex_custom_init' );
-
-/**
- * Register a book post type.
+ * Register a Distribuidor post type.
  */
 function wpdocs_dist_codex_custom_init() {
+	$labels = array(
+		'name'               => _x( 'Distribuidores', 'post type general name' ),
+		'singular_name'      => _x( 'Distribuidor', 'post type singular name' ),
+		'menu_name'          => _x( 'Distribuidores', 'admin menu' ),
+		'name_admin_bar'     => _x( 'Distribuidor', 'add new on admin bar' ),
+		'add_new'            => _x( 'Adicionar Novo', 'Distribuidor' ),
+		'add_new_item'       => __( 'Adicionar Novo Distribuidor' ),
+		'new_item'           => __( 'Novo Distribuidor' ),
+		'edit_item'          => __( 'Editar Distribuidor' ),
+		'view_item'          => __( 'Visualizar Distribuidor' ),
+		'all_items'          => __( 'Ver Todos os Distribuidores' ),
+		'search_items'       => __( 'Buscar Distribuidores' ),
+		'not_found'          => __( 'Nenhum Distribuidor Encontrado.' ),
+		'not_found_in_trash' => __( 'Nenhum Distribuidor Encontrado na Lixeira' )
+	);
+
     $args = array(
-        'public' => true,
-        'label'  => __( 'Distribuidores', 'textdomain' ),
-    );
+		'labels'             => $labels,
+        'description'        => __( 'Seção de gerenciamento da listagem de Distribuidores na Home do Site.' ),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'Distribuidor' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'thumbnail', 'excerpt', 'comments' )
+	);
+
     register_post_type( 'distribuidor', $args );
 }
 add_action( 'init', 'wpdocs_dist_codex_custom_init' );
