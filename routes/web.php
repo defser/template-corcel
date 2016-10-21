@@ -13,5 +13,6 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::get('/post', 'PostController@index');
+Route::get('/blog', 'BlogController@index');
+Route::get('/blog/{slug}', 'BlogController@post');
 

@@ -13,10 +13,7 @@ use View;
 class HomeController extends Controller
 {
     public function index(){
-        //$posts = Post::published()->get();
-        
         $distribuidores = Post::type('distribuidor')->status('publish')->get();
-        
         return View::make('home.index')->with('distribuidores', $distribuidores);
     }
 }
