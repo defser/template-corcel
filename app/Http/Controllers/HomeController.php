@@ -8,7 +8,11 @@ use App\Http\Requests;
 
 use App\Post;
 use App\Distribuidores;
+use App\Contact;
 use View;
+use Validator;
+use Mail;
+use Config;
 
 class HomeController extends Controller
 {

@@ -1,5 +1,5 @@
 .contact
-    //background-color: $color_dark_gray
+    background-color: $color_dark_gray
 
     @include breakpoint(phablet)
         background: none
@@ -29,12 +29,6 @@
     .form
         padding: 65px 0 58px
 
-        .first-collum
-            padding-right: 0
-        
-        .second-collum
-            padding-left: 0
-
         .form-control
             box-shadow: none
             border-radius: 0
@@ -43,9 +37,10 @@
             font-weight: bold
 
         .form-group
+            position: relative
             border: 1px solid #f0f0f0
-            padding: 5px
-            margin-bottom: 2px
+            //padding: 5px
+            //margin-bottom: 2px
             
             input
                 background-color: #fff
@@ -59,12 +54,8 @@
                 border: none
                 height: 144px
 
-        .input
-            padding: 0
-
         .btn
             float: right
-            margin-right: 5px
         
         .message
             position: relative
@@ -84,9 +75,6 @@
                 position: relative
                 top: 0
                 right: 0
-        
-        .textarea > textarea
-            color: $color_white
 
         .textarea .field-validation-error
             top: 10px
@@ -100,7 +88,7 @@
 
         .load-gif
             display: none
-            float: left
+            float: right
             margin-top: -2px
 
         .contact-response

@@ -15,4 +15,4 @@ Route::get('/', 'HomeController@index');
 
 Route::get('/blog', 'BlogController@index');
 Route::get('/blog/{slug}', 'BlogController@post');
-
+Route::post('send-contact', 'HomeController@sendForm');

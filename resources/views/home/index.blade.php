@@ -83,28 +83,23 @@
                     <span class="obrigatory-fields">(*) campos obrigatórios</span>
 
                     <form id="form-contact">
-                        <div class="first-collum col-md-5">
+                        <div class="col-md-5">
 
                             <div class="form-group row">
-                                <div class="input col-md-9 col-xs-9">
-                                    <input type="text" name="name" class="form-control required" placeholder="nome *">
-                                </div>
+                                <input type="text" name="name" class="form-control required" placeholder="nome *">
                             </div>
 
                             <div class="form-group row">
-                                <div class="input col-md-9 col-xs-9">
-                                    <input type="email" name="email" class="form-control required email" placeholder="email *">
-                                </div>
+                                <input type="email" name="email" class="form-control required email" placeholder="email *">
                             </div>
 
                             <div class="form-group row">
-                                <div class="input col-md-9 col-xs-9">
-                                    <input type="text" name="phone" class="form-control phone" placeholder="telefone">
-                                </div>
+                                <input type="text" name="phone" class="form-control phone" placeholder="telefone">
                             </div>
+                            
                         </div>
                         
-                        <div class="second-collum col-md-7">
+                        <div class="col-md-7">
                             <div class="form-group textarea">
                                 <textarea class="form-control required" name="message" rows="6" placeholder="mensagem *"></textarea>
                             </div>
