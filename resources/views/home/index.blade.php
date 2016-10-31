@@ -17,7 +17,15 @@
                     </div>
 
                     <div class="col-md-6 col-xs-12">
-                        <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=550%C3%97150&w=500&h=250" alt="">
+                        
+                        <a class="fancybox button-ampliar" rel="group" href="/images/post-sample-image.jpg">
+                            <strong>+</strong> ver fotos
+                        </a>
+
+                        <a class="fancybox hidden-md hidden-lg hidden-sm hidden-xs" rel="group" href="/images/post-sample-image.jpg">
+                            <img src="/images/post-sample-image.jpg" alt="" />
+                        </a>
+                        
                     </div>
 
                 </div>
@@ -54,9 +62,67 @@
                 </div>
             </div>
 
-            <div id="contato" class="contact">
-                <div class="row pt50">
-                    <div id="map"></div>
+        </div>
+
+        <div id="contato" class="contact">
+            <div class="row pt50">
+                <div id="map"></div>
+            </div>
+
+            <div class="container">
+            
+                <div class="row col-md-7">
+                    <h2 class="title">Endereço
+                    Fone (51) 33333333
+                    <a href="mailto:asd@asd.com.br">asd@asd.com.br</a></h2>
+                </div>
+
+                <div class="form col-md-12">
+
+                    <h4 class="subtitle">Envie sua mensagem</h4>
+                    <span class="obrigatory-fields">(*) campos obrigatórios</span>
+
+                    <form id="form-contact">
+                        <div class="first-collum col-md-5">
+
+                            <div class="form-group row">
+                                <div class="input col-md-9 col-xs-9">
+                                    <input type="text" name="name" class="form-control required" placeholder="nome *">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="input col-md-9 col-xs-9">
+                                    <input type="email" name="email" class="form-control required email" placeholder="email *">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="input col-md-9 col-xs-9">
+                                    <input type="text" name="phone" class="form-control phone" placeholder="telefone">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="second-collum col-md-7">
+                            <div class="form-group textarea">
+                                <textarea class="form-control required" name="message" rows="6" placeholder="mensagem *"></textarea>
+                            </div>
+
+                            <div class="col-md-12 p0">
+                                <div class="message col-md-10 p0">
+                                    <img class="load-gif" src="/Images/ajax-loader.gif">
+                                    <div class="contact-response"></div>
+                                </div>
+
+                                <div class="col-md-2 p0">
+                                    <input type="button" class="btn btn-primary button-form" value="Enviar"/>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
                 </div>
             </div>
         </div>
