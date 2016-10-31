@@ -7,7 +7,7 @@
             <h1>Texto título</h1>
         </div>
 
-        <div class="container">
+        <div id="empresa" class="container">
             <div class="about">
                 <div class="row pt50">
 
@@ -54,7 +54,7 @@
                 </div>
             </div>
 
-            <div class="contact">
+            <div id="contato" class="contact">
                 <div class="row pt50">
                     <div id="map"></div>
                 </div>

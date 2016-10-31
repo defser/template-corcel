@@ -23,7 +23,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-                        <span class="sr-only">Toggle navigation</span>
+                        <span class="sr-only">Mostrar menu</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -33,13 +33,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="/">Home</a></li>
-                        <li><a href="#/about">About</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#/about">About</a></li>
-                        <li><a href="#/contact">Contact</a></li>
-                    </ul>
+                            <li><a href="javascript:void(0);" id="empresa-link">Empresa</a></li>
+                            <li><a href="javascript:void(0);" id="servicos-link">Serviços</a></li>
+                            <li><a href="javascript:void(0);" id="blog-link">Blog</a></li>
+                            <li><a href="javascript:void(0);" id="contato-link">Contato</a></li>
+                        </ul>
                 </div>
             </div>
         </nav>
