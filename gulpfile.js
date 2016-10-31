@@ -2,8 +2,8 @@ const elixir = require('laravel-elixir')
 require('laravel-elixir-imagemin')
 
 elixir(mix => {
-  mix.sass('*.sass')
-  .styles('*.css')
+  mix.styles('*.css')
+  .sass('*.sass')
   .scripts('*.js')
   .imagemin()
   .copy('resources/assets/fonts', 'public/fonts')

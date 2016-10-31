@@ -10,7 +10,7 @@ use View;
 class BlogController extends Controller
 {
     public function index(){
-        $posts = Post::type('post')->status('publish')->orderBy('id', 'DESC')->simplePaginate(2);
+        $posts = Post::type('post')->status('publish')->orderBy('id', 'DESC')->simplePaginate(1);
         return View::make('blog.index')->with('posts', $posts);
     }
 

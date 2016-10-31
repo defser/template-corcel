@@ -1,4 +1,46 @@
-.intro-header .page-heading, .intro-header .post-heading, .intro-header .site-heading.post
-    color: $color_black
-    padding: 150px 0 30px
-    
+.blog
+    .intro-header .page-heading, .intro-header .post-heading
+        padding: 100px 0
+
+    header .site-heading 
+        padding: 140px 0 140px 0
+
+    @include breakpoint(phablet)
+        text-align: left
+        
+    .back
+        padding-left: 15px
+
+    .intro-header
+        background-color: #000
+        opacity: 1
+
+        .detail
+            position: absolute
+            opacity: .4
+
+            @include breakpoint(phablet)
+                 padding: 190px 0 0
+
+            .post-heading   
+                color: $color_light_blue
+                font-weight: bold
+                padding: 20px 0 0 15px
+
+
+    .post-title, .post-heading
+        color: #000
+        font-weight: bold
+
+    .intro-header.post
+        background-color: transparent
+
+    article
+        min-height: 449px
+
+        p
+            margin-bottom: 30px
+
+        img
+            max-width: 100%
+            height: auto

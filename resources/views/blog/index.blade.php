@@ -3,14 +3,15 @@
 @section('content')
 
     <div class="blog pt50 pb50">
-        <header class="intro-header" style="background-image: url('/images/home-bg.jpg')">
+        <header class="intro-header">
+            <img class="detail hidden-xs" src="/images/painel-dicas.jpg" alt="Detalhe Dicas">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="site-heading">
-                            <h1>Clean Blog</h1>
+                            <h1>Blog</h1>
                             <hr class="small">
-                            <span class="subheading">A Clean Blog Theme</span>
+                            <span class="subheading">Cliente</span->
                         </div>
                     </div>
                 </div>
@@ -29,7 +30,7 @@
                                     {{$post->Title}}
                                 </h2>
                                 <h3 class="post-subtitle">
-                                    {!! $post->Content !!}
+                                    {!! str_limit(strip_tags($post->Content), $limit = 150, $end = '...') !!}
                                 </h3>
                             </a>
                         </div>
