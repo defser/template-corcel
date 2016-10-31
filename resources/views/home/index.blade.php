@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="col-md-6 col-xs-12">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=550%C3%97150&w=500&h=250" alt="">
+                        <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=550%C3%97150&w=500&h=250" alt="">
                     </div>
 
                 </div>
@@ -25,7 +25,7 @@
                 <div class="row pt50">
 
                     <div class="col-md-6 col-xs-12">
-                        <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=550%C3%97150&w=500&h=250" alt="">
+                        <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=550%C3%97150&w=500&h=250" alt="">
                     </div>
 
                     <div class="col-md-6 col-xs-12">
