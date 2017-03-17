@@ -3,6 +3,29 @@ $(document).ready(function(){
     var currentSection = location.hash;    
     var menuHeight = 50;
 
+    /* PANEL */
+
+    $('.slider-home-panel').slick({
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      arrows: false,
+      dots: true
+    });
+
+    $('.slider-home-panel').css('height',$(window).height() - 70);
+    $('.slider-home-panel').find('.slick-list').css('height', $(window).height() - 70);
+    $('.slider-home-panel').find('.slick-slide').css('height', $(window).height() - 70);
+
+    $(window).resize(function(){
+      $('.slider-home-panel').css('height',$(window).height() - 70);
+      $('.slider-home-panel').find('.slick-list').css('height', $(window).height() - 70);
+      $('.slider-home-panel').find('.slick-slide').css('height', $(window).height() - 70);
+      $('.slider-home-panel').find('figure').css('height', $(window).height() - 70);
+    });
+
+    /* END PANEL */
+
     if(currentSection != ""){        
         var offset = $(currentSection.replace('-link',"")).offset().top - menuHeight;                            
         $("html, body").animate({ scrollTop: offset }, 500);                

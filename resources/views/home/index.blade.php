@@ -1,11 +1,40 @@
 @extends('layout')
 
 @section('content')
-    <div class="home">
+    <section class="home">
 
-        <div class="custom-panel">
-            <h1>Texto título</h1>
-        </div>
+        <section class="panel-home">
+        <div class="slider-home-panel">
+            <div>
+                <div class="text">
+                  <p class="title-category"><span>01</span> / texto</p>
+                  <div class="title-panel">
+                    <h3>Titulo</h3>
+                  </div>
+                  <div class="btn-with-arrow-outter">
+                    <a href="/" class="btn" alt="Saiba mais">
+                        <p>Saiba mais</p>
+                    </a>
+                  </div>
+                </div>
+                <figure style="background-image: url(images/panel-home3.jpg);" />
+            </div>
+
+            <div>
+                <div class="text">
+                  <p class="title-category"><span>02</span> / texto</p>
+                  <div class="title-panel">
+                    <h3>Titulo</h3>
+                  </div>
+                  <div class="btn-with-arrow-outter">
+                    <a href="/" class="btn" alt="Saiba mais">
+                        <p>Saiba mais</p>
+                    </a>
+                  </div>
+                </div>
+                <figure style="background-image: url(images/panel-home4.jpg);" />
+            </div>
+        </section>
 
         <div id="empresa" class="container">
             <div class="about">
@@ -121,6 +150,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 @stop
 
