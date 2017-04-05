@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('title', 'Blog')
+
 @section('content')
 
     <div class="blog pt50 pb50">

@@ -1,102 +1,118 @@
-.contact
-    background-color: $color_dark_gray
+.contact-page
+  @include breakpoint(phablet)
+      background: none
+      padding-top: 55px
+      padding-bottom: 55px
 
-    @include breakpoint(phablet)
-        background: none
+      @include breakpoint(phablet)
+          line-height: 29px
+          @include font-size(24px)
 
-    .title
-        @include font-size(33px)
-        color: $color_dark_gray
-        font-weight: 500
-        line-height: 45px
-        margin-top: 40px
+  .obrigatory-fields
+      @include font-size(14px)
+      padding-left: 5px
+      color: $color_dark_gray
+
+  .form
+    .form-control
+        box-shadow: none
+        border-radius: 0
+        color: #aaaaaa
+        @include font-size(16px)
+        font-weight: bold
+        width: 100%
+        font-family: 'NunitoRegular'
+        -webkit-font-smoothing: antialiased
+
+    .form-group
+        position: relative
+        border: 1px solid #f0f0f0
+        //padding: 5px
+        margin-bottom: 30px
+        width: 45%
+        float: left
+        margin-right: 25px
+
+        @include media("<=990px")
+          width: 100%
+          margin-right: 0px
+
+        &.last
+          margin-right: 0
+
+        input
+            background-color: #f2f2f2
+            opacity: 0.9
+            border: 1px solid #cccccc
+            height: 45px
+            margin-right: 25px
+
+    textarea
+        background-color: #f2f2f2
+        opacity: 0.9
+        border: 1px solid #cccccc
+        height: 110px
+        width: 96% !important
+
+        @include media("<=990px")
+          width: 100% !important
+
+    select
+      height: 46px
+      background-color: #f2f2f2
+      border: 1px solid #cccccc
+
+    .btn-wrapper
+      margin-top: 35px
+
+
+    .message
+        position: relative
+        top: 4px
+        text-align: right
+        color: $color_success
+
+    .field-validation-error
+        color: $color_error
+        position: absolute
+        bottom: -30px
+        left: 0px
+        background-color: #f2dede
+        padding: 3px
+
+        @include font-size(16px)
 
         @include breakpoint(phablet)
-            line-height: 29px
-            @include font-size(16px)
-    
-    .subtitle
-        @include font-size(25px)
-        color: $color_dark_gray
-        margin-bottom: 5px
-        padding-left: 5px
-    
-    .obrigatory-fields
-        @include font-size(14px)
-        padding-left: 5px
-        color: $color_dark_gray
-
-    .form
-        padding: 65px 0 58px
-
-        .form-control
-            box-shadow: none
-            border-radius: 0
-            color: $color_dark_gray
-            @include font-size(18px)
-            font-weight: bold
-
-        .form-group
+            @include font-size(14px)
             position: relative
-            border: 1px solid #f0f0f0
-            //padding: 5px
-            //margin-bottom: 2px
-            
-            input
-                background-color: #fff
-                opacity: 0.9
-                border: none
-                height: 65px
-            
-            textarea
-                background-color: #fff
-                opacity: 0.9
-                border: none
-                height: 144px
+            top: 0
+            right: 0
 
-        .btn
-            float: right
-        
-        .message
+    .textarea .field-validation-error
+        bottom: -30px
+        left: 0px
+
+        @include breakpoint(phablet)
+            @include font-size(14px)
             position: relative
-            top: 4px
-            text-align: right
-            color: $color_success
+            top: 0
+            right: 0
 
-        .field-validation-error
-            color: $color_error
-            position: absolute
-            top: 22px
-            right: 8px
-            @include font-size(16px)
+    .load-gif
+        display: none
+        margin: 0 auto
 
-            @include breakpoint(phablet)
-                @include font-size(14px)
-                position: relative
-                top: 0
-                right: 0
+    .contact-response
+        position: relative
+        top: 4px
+        @include font-size(16px)
+        text-align: center
 
-        .textarea .field-validation-error
-            top: 10px
-            right: 28px
+        @include breakpoint(phablet)
+            top: -10px
+            float: none
+            text-align: center
 
-            @include breakpoint(phablet)
-                @include font-size(14px)
-                position: relative
-                top: 0
-                right: 0
-
-        .load-gif
-            display: none
-            float: right
-            margin-top: -2px
-
-        .contact-response
-            position: relative
-            top: 4px
-            @include font-size(16px)
-
-            @include breakpoint(phablet)
-                top: -10px
-                float: none
-                text-align: center
+  #map
+    border: 5px solid green
+    height: 375px

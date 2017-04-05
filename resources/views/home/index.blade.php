@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('title', 'Home')
+
 @section('content')
     <section class="home">
 
@@ -7,8 +9,8 @@
         <div class="slider-home-panel">
             <div>
                 <div class="text">
-                  <p class="title-category"><span>01</span> / texto</p>
-                  <div class="title-panel">
+                  <p class="title-category animated"><span>01</span> / texto</p>
+                  <div class="title-panel animated">
                     <h3>Titulo</h3>
                   </div>
                   <div class="btn-with-arrow-outter">
@@ -22,8 +24,8 @@
 
             <div>
                 <div class="text">
-                  <p class="title-category"><span>02</span> / texto</p>
-                  <div class="title-panel">
+                  <p class="title-category animated"><span>02</span> / texto</p>
+                  <div class="title-panel animated">
                     <h3>Titulo</h3>
                   </div>
                   <div class="btn-with-arrow-outter">
@@ -46,23 +48,23 @@
                     </div>
 
                     <div class="col-md-6 col-xs-12">
-                        
+
                         <a class="fancybox button-ampliar" rel="group" href="/images/post-sample-image.jpg">
                             <strong>+</strong> ver fotos
                         </a>
 
                         <a class="fancybox hidden-md hidden-lg hidden-sm hidden-xs" rel="group" href="/images/post-sample-image.jpg">
-                            <img src="/images/post-sample-image.jpg" alt="" />
+                            <img class="lazy" src="/images/post-sample-image.jpg" alt="" />
                         </a>
-                        
+
                     </div>
 
                 </div>
-                
+
                 <div class="row pt50">
 
                     <div class="col-md-6 col-xs-12">
-                        <img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=550%C3%97150&w=500&h=250" alt="">
+                        <img class="img-responsive lazy" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=550%C3%97150&w=500&h=250" alt="">
                     </div>
 
                     <div class="col-md-6 col-xs-12">
@@ -93,13 +95,13 @@
 
         </div>
 
-        <div id="contato" class="contact">
+        <div id="contato" class="contact container-fluid">
             <div class="row pt50">
                 <div id="map"></div>
             </div>
 
             <div class="container">
-            
+
                 <div class="row col-md-7">
                     <h2 class="title">Endereço
                     Fone (51) 33333333
@@ -125,9 +127,9 @@
                             <div class="form-group row">
                                 <input type="text" name="phone" class="form-control phone" placeholder="telefone">
                             </div>
-                            
+
                         </div>
-                        
+
                         <div class="col-md-7">
                             <div class="form-group textarea">
                                 <textarea class="form-control required" name="message" rows="6" placeholder="mensagem *"></textarea>

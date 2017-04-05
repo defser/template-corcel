@@ -11,8 +11,16 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+//create menu header
+View::creator(['partials.menu_header'], 'App\Http\ViewCreators\MenuCreator');
 
-Route::get('/blog', 'BlogController@index');
-Route::get('/blog/{slug}', 'BlogController@post');
-Route::post('send-contact', 'HomeController@sendForm');
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+
+Route::get('/blog', ['as' => 'blog', 'uses' => 'HomeController@index']);
+Route::get('/blog/{slug}', ['as' => 'blog', 'uses' => 'HomeController@post']);
+
+Route::get('/contato', ['as' => 'contato', 'uses' => 'ContactController@index']);
+Route::post('/send-contact', 'ContactController@sendForm');
+
+Route::get('/notfound', ['as' => 'notfound', 'uses' => 'ErrorsController@pagenotfound']);
+Route::get('/internalerror', ['as' => 'error', 'uses' => 'ErrorsController@internalerror']);

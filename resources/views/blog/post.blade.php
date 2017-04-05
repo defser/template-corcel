@@ -1,16 +1,18 @@
 @extends('layout')
 
+@section('title', 'Blog')
+
 @section('content')
 <!-- Page Header -->
 <!-- Set your background image for this header on the line below. -->
 <div class="blog">
     <header class="intro-header post">
-        
+
         <div class="container">
-            
+
             <div class="row">
                 <div class="post-heading-area col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
+
                     <a href="/blog" class="back">< Voltar</a>
 
                     <div class="post-heading">
@@ -26,7 +28,7 @@
         <div class="container">
             <div class="row">
                 <div class="content col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    {!! $post->Content !!}    
+                    {!! $post->Content !!}
                 </div>
             </div>
         </div>
