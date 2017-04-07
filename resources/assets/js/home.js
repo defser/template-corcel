@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    alignFooter();
     var currentSection = location.hash;
     var menuHeight = 100;
 
@@ -106,5 +106,14 @@ $(document).ready(function(){
         $(this).hide();
       });
     }, 400);
+
+    function alignFooter(){
+      var docHeight = $(window).height();
+      var footerHeight = $('#footer').outerHeight();
+      var footerTop = $('#footer').position().top + footerHeight;
+      if (footerTop < docHeight) {
+        $('#footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+      }
+    }
 
 });

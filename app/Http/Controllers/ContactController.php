@@ -54,14 +54,14 @@ class ContactController extends Controller
             ],
             function ($m) use ($contact) {
                 $m->from(Config::get('mail.from.address'), Config::get('mail.from.name'));
-                $m->to(Config::get('mail.from.address'), Config::get('mail.from.name'))->subject('Toledo Metais - Formulário de Contato');
+                $m->to(Config::get('mail.from.address'), Config::get('mail.from.name'))->subject('Formulário de Contato');
             }
         );
 
         return response()->json(['message' => 'success']);
 
       }catch(\Exception $e){
-        return response()->json(['message' => 'error']);
+        return $e;
       }
     }
 }

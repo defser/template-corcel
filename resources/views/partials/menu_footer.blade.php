@@ -1,4 +1,4 @@
-<footer>
+<footer id="footer">
   <div class="container p0">
     <div class="col-md-1 col-sm-12 col-xs-12 logo p0">
       <a href="/">
