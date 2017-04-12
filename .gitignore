@@ -4,6 +4,7 @@
 /public/images
 /public/fonts
 /public/vendors
+/public/build
 /vendor
 /.idea
 Homestead.json

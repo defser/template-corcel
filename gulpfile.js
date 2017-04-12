@@ -5,6 +5,7 @@ elixir(mix => {
   mix.styles('*.css')
   .sass('*.sass')
   .scripts('*.js')
+  .version(['css/*.css', 'js/*.js'])
   .imagemin()
   .copy('resources/assets/fonts', 'public/fonts')
   .copy('resources/assets/fancybox', 'public/vendors/fancybox')
