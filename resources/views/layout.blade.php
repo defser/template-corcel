@@ -18,7 +18,7 @@
 
   <body>
 
-    @include('partials.menu_header')
+    @include('partials.menu_header_submenu')
 
     @yield('content')
 

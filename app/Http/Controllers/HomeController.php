@@ -17,8 +17,9 @@ use Config;
 class HomeController extends Controller
 {
     public function index(){
-        $distribuidores = Post::type('distribuidor')->status('publish')->get();
-        return View::make('home.index')->with('distribuidores', $distribuidores);
+      $typeDevice = $this->checkAgent();
+      $distribuidores = Post::type('distribuidor')->status('publish')->get();
+      return View::make('home.index')->with('distribuidores', $distribuidores)->with('typeDevice', $typeDevice);
     }
 
     public function sendForm(Request $request){
@@ -39,19 +40,19 @@ class HomeController extends Controller
         $contact->phone = preg_replace('/\D+/', '', $phoneWithMasks);
         $contact->message = $request->input('message');
         $contact->save();
-        
-        Mail::send('forms.contacthome', 
-            [   
-                'email' => Config::get('mail.from.address'), 
+
+        Mail::send('forms.contacthome',
+            [
+                'email' => Config::get('mail.from.address'),
                 'contact' => $contact,
                 'phoneWithMasks' => $phoneWithMasks
-            ], 
+            ],
             function ($m) use ($contact) {
                 $m->from(Config::get('mail.from.address'), Config::get('mail.from.name'));
                 $m->to(Config::get('mail.from.address'), Config::get('mail.from.name'))->subject('Cardiocenter - Formulário de Contato');
             }
         );
-        
+
         return response()->json(['message' => 'success']);
     }
 }

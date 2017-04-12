@@ -1,0 +1,341 @@
+.header
+  width: 100%
+  height: 70px
+  text-align: center
+  color: white
+  font-size: 11.9px
+  font-weight: 500
+  padding: 16px 0
+  background-color: #343434
+
+  @include media("<768px")
+    text-align: left
+    font-size: 15px
+
+  .navbar
+    max-width: 1440px
+    margin: 0 auto
+    background-color: inherit
+    box-sizing: border-box
+
+  .navbar-toggle
+    margin-top: 3px
+    margin-right: 130px
+    border: none
+    z-index: 999
+
+    @include media("<=768px")
+      margin-right: 0px
+
+    &:hover
+      background-color: $color_light_gray
+
+    &:active, &:focus
+      background-color: $color_light_gray
+
+    .icon-bar
+      background-color: #fff
+
+  .navbar-collapse
+    @include media("<768px")
+      margin-top: 11px
+      min-height: 100%
+      border-top: 1px solid $color_light_gray
+
+  .navbar-default
+    border: none
+    z-index: 9999
+
+    /*MENU LINKS*/
+  .navbar-default .navbar-nav > li > a
+    color: inherit
+    text-transform: uppercase
+    padding: 10px 40.5px
+    box-sizing: border-box
+    letter-spacing: 1px
+
+    @include media("<=1268px")
+      padding: 10px 20px
+
+    @include media("<768px")
+      float: left
+      width: 100%
+      padding: 20px 20px
+
+    &:after
+      content: " "
+      float: left
+      margin-top: 22px
+      height: 1px
+      width: 100%
+      background-color: $color_light_gray
+      overflow: hidden
+      -webkit-transition: opacity 0.3s ease-in-out
+      -moz-transition: opacity 0.3s ease-in-out
+      -o-transition: opacity 0.3s ease-in-out
+      transition: opacity 0.3s ease-in-out
+      @include opacity(0)
+
+      @include media("<=768px")
+        display: none
+
+  /*MENU HOVER*/
+  .navbar-default .navbar-nav > li > a:hover
+    &:after
+      @include opacity(1)
+
+  /* CONTAINER INSIDE NAVBAR */
+  .container
+    width: 1340px
+
+    @include media("<1440px")
+      width: 100%
+      padding-left: 15px
+      padding-right: 15px
+
+  .dropdown-wrapper
+    background-color: white
+    padding-top: 40px
+    margin-top: 28px
+    border: none
+    border-radius: 0
+    box-shadow: none
+    border-bottom: 4px solid #139bcd
+    min-width: 256px
+    float: left
+
+    @include media("<768px")
+      background-color: #e5e5e5
+
+    @include media("<=768px")
+      padding-top: 20px
+      margin-top: 0
+      width: 100%
+
+
+  .dropdown-list > li > a
+    margin-bottom: 32px
+    padding: 0
+    /*border-bottom: 1px solid #139bcd*/
+    font-size: 15px
+    background-color: transparent
+    color: $color_dark_gray
+    float: left
+
+    @include media("<=768px")
+      width: 100%
+
+    &:after
+      content: " "
+      display: table
+      margin-top: 2px
+      height: 1px
+      width: 21px
+      background-color: $color_light_gray
+      overflow: hidden
+      -webkit-transition: width 0.5s ease-in-out
+      -moz-transition: width 0.5s ease-in-out
+      -o-transition: width 0.5s ease-in-out
+      transition: width 0.5s ease-in-out
+
+      @include media("<=768px")
+        width: 5%
+
+  .dropdown-list > li > a:hover
+    color: $color_light_gray !important
+
+    &:after
+      width: 100%
+
+  .dropdown-list > li
+    padding: 0 45px
+
+    @include media("<768px")
+      padding: 0
+
+  .navbar-nav
+    float: none
+
+  .navbar-header
+    margin-right: 0
+    padding-left: 15px
+
+    @include media(">1024px")
+      margin-right: 160px
+
+    @include media("<=1024px")
+      margin-right: 65px
+
+    @include media("<=768px")
+      margin-right: 30px
+
+    @include media("<768px")
+      margin-right: 100px
+
+    @include media("<=414px")
+      margin-right: 50px
+
+    @include media("<414px")
+      margin-right: 40px
+
+  .navbar-brand
+    padding: 0
+    width: 212px
+    height: auto
+    @include opacity(1)
+
+    &:hover
+      @include opacity(0.8)
+      -ms-transition: opacity .8s
+      -moz-transition: opacity .8s
+      -o-transition: opacity .8s
+      -webkit-transition: opacity .8s
+      transition: opacity .8s
+
+    @include media("<=1268px")
+      width: auto
+
+    svg
+      width: 55px
+      height: 37px
+      float: left
+
+    .c-name
+      line-height: 40px
+      margin-left: 20px
+      text-transform: uppercase
+      float: left
+      color: white
+      font-size: 18px
+      letter-spacing: 8.7px
+
+      @include media("<1024px")
+        display: none
+
+  .search
+    position: absolute
+    right: 0
+    top: -16px
+    height: 70px
+
+    @include media("<=desktop")
+      text-align: center
+
+    .cls-1
+      fill: $color_light_gray
+      fill-rule: evenodd
+
+    &:hover > a > svg > g > g > g > g > path
+      fill: white
+
+    &:hover
+      cursor: pointer
+      background-color: $color_light_gray
+
+    a
+      position: relative
+      top: 27px
+
+    svg
+      width: 17px
+
+      &:hover
+        fill: #111
+
+  /*remove focus and active states on menu links*/
+  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus
+    background-color: transparent
+    color: inherit
+
+  .dropdown-menu
+    @include media("<=768px")
+      padding: 0
+      margin: 0
+
+    @include media("<768px")
+      .dropdown-wrapper
+        position: relative
+
+        &:before
+          width: 0
+          height: 0
+          border-left: 15px solid transparent
+          border-right: 15px solid transparent
+          border-top: 15px solid #343434
+          bottom: 21px
+          margin-left: -20px
+          content: ''
+          right: 25px
+          position: absolute
+          z-index: 999
+          top: 0px
+
+  /* Reached desktop size */
+  /* 1024 and up */
+  /* 1024 is when the hamburguer menu appears*/
+  @include media(">=1024px")
+
+      .navbar-nav
+        float: none
+
+        .open > .dropdown-menu
+          display: none
+
+      /* show submenu on hover */
+      li.dropdown:hover > .dropdown-menu
+        display: block
+        -ms-animation: fadeIn 0.3s
+        -webkit-animation: fadeIn 0.3s
+        -moz-animation: fadeIn 0.3s
+        -o-animation: fadeIn 0.3s
+        animation: fadeIn 0.3s
+
+      .dropdown-menu
+        background-color: transparent
+        padding: 0 50px
+        border-radius: 0
+        border: none
+        left: -6%
+        box-shadow: none
+
+        @include media(">=1024px", "<1025px")
+          padding: 0 20px
+
+        @include media("<768px")
+          padding: 0
+
+        /* submenu triangle */
+        .dropdown-wrapper:before
+          width: 0
+          height: 0
+          /*change triangle size*/
+          border-left: 8px solid transparent
+          border-right: 8px solid transparent
+          border-bottom: 8px solid white
+          top: 21px
+          margin-left: -10px
+          content: ''
+          left: 26%
+          position: absolute
+          z-index: 999
+
+        .navbar-default .navbar-nav > .dropdown-menu li a:hover,
+        .navbar-default .navbar-nav > .dropdown-menu li a:hover,
+        .navbar-default .navbar-nav > .dropdown-menu li a:hover
+          background-color: none
+
+        /* ANIMATIONS */
+        a.single
+          -webkit-transition: all .40s
+          -moz-transition: all .40s
+          -ms-transition: all .40s
+          -o-transition: all .40s
+          transition: all .40s
+
+        a.single.show
+          opacity: 1
+          transform: translate3d(0px, 0px, 0px)
+          -o-transform: translate3d(0px, 0px, 0px)
+          -ms-transform: translate3d(0px, 0px, 0px)
+          -moz-transform: translate3d(0px, 0px, 0px)
+          -webkit-transform: translate3d(0px, 0px, 0px)

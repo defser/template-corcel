@@ -10,10 +10,12 @@ use View;
 class ErrorsController extends Controller
 {
     public function pagenotfound(){
-        return View::make('errors.404');
+      $typeDevice = $this->checkAgent();
+      return View::make('errors.404')->with('typeDevice', $typeDevice);
     }
 
     public function internalerror(){
-        return View::make('errors.500');
+      $typeDevice = $this->checkAgent();
+      return View::make('errors.500')->with('typeDevice', $typeDevice);
     }
 }
